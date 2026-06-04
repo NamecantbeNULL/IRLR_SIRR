@@ -50,33 +50,14 @@ You can run
 ```python test.py --name IRLR --dataroot ./datasets/SIRR --model IRLR --dataset_mode sirr  --preprocess "" --no_flip --epoch final --gpu_ids 0```	
 
 
-### Train
+## Citations
+#### BibTeX
 
-- #### Download training data
-
-_Note: Due to the size limit, we are temporarily unable to place the training data we compiled in the supplemental material, which will be open sourced on Github and Google Drive after the double-blind end.
-
-- #### Prepare data
-
-Prepare the training data as:
-
-```
-── datasets
-    └─ SIRR
-        ├─ test
-        │  ├─ real_I
-        │  │   └─ ... (mixed images)
-        │  └─ real_T
-        │      └─ ... (background images) 
-        └─ train
-           ├─ real_I
-           │   └─ ... (mixed images)
-           └─ real_T
-               └─ ... (background images) 
-```
-
-- #### Run
-
-You can run 
-
-``` python train.py --dataroot ./datasets/SIRR --name IRLR --model IRCP --dataset_mode sirr --no_flip --gpu_ids 0,1,2,3 --display_id -1 --batch_size 16 --save_epoch_freq 1 --lr 0.0001```	
+    @article{song2026irlr,
+      author={Song, Binbin and Zhou, Jiantao and Xu, Shuning and Liu, Xina and Wu, Haiwei and Fan, Xiaopeng and Wen, Bihan},
+      journal={IEEE Transactions on Image Processing}, 
+      title={Single-Image Reflection Removal via Iterative Prompt Learning of Reflection Level}, 
+      year={2026},
+      volume={35},
+      number={},
+      pages={5698-5713}}
