@@ -50,6 +50,35 @@ You can run
 ```python test.py --name IRLR --dataroot ./datasets/SIRR --model IRLR --dataset_mode sirr  --preprocess "" --no_flip --epoch final --gpu_ids 0```	
 
 
+### Train
+
+
+- #### Prepare data
+
+Prepare the training data as:
+
+```
+── datasets
+    └─ SIRR
+        ├─ test
+        │  ├─ real_I
+        │  │   └─ ... (mixed images)
+        │  └─ real_T
+        │      └─ ... (background images) 
+        └─ train
+           ├─ real_I
+           │   └─ ... (mixed images)
+           └─ real_T
+               └─ ... (background images) 
+```
+
+- #### Run
+
+You can run 
+
+``` python train.py --dataroot ./datasets/SIRR --name IRLR --model IRCP --dataset_mode sirr --no_flip --gpu_ids 0,1,2,3 --display_id -1 --batch_size 16 --save_epoch_freq 1 --lr 0.0001```	
+
+
 ## Citations
 #### BibTeX
 
